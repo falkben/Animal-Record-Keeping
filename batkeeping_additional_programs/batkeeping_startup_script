@@ -1,2 +1,2 @@
-cd /usr/local/batkeeping
+cd /home/ben/Animal-Record-Keeping/
 passenger start -e production -d

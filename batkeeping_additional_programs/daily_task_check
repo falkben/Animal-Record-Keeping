@@ -1,6 +1,9 @@
 #!/bin/bash
-cd /usr/local/batkeeping/
 set +e
+
+source /home/ben/.rvm/scripts/rvm
+
+cd /home/ben/Animal-Record-Keeping/
 
 echo "populating automatic flight logs"
 rake populate_daily_flight_logs RAILS_ENV=production

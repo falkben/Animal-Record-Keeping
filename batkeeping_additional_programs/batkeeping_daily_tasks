@@ -1,4 +1,7 @@
 #!/bin/bash
-cd /usr/local/batkeeping/
+source /home/ben/.rvm/scripts/rvm
+
+cd /home/ben/Animal-Record-Keeping/
+
 rake populate_census_entries RAILS_ENV=production
 echo "task-census entries populated"

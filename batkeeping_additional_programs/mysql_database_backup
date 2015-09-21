@@ -1,6 +1,7 @@
 #!/bin/bash
 date=`date +%A`
-cd /mnt/raid/software/batkeeping_backups/
+cd ~/batkeeping_backups/
+#cd /mnt/raid/software/batkeeping_backups/
 fname=$date\_batkeeping_backup.sql
 
 mysqldump -u root -p"batlab" batkeeping > $fname
@@ -8,5 +9,7 @@ mysqldump -u root -p"batlab" batkeeping > $fname
 sed "7i\USE 'batkeeping';"  $fname > temp.txt
 mv temp.txt $fname
 bzip2 -f $fname
+
+bash /home/ben/Dropbox-Uploader/dropbox_uploader.sh upload $fname.bz2 $fname.bz2
 
 echo "batkeeping database backed up"
