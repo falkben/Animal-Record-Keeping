@@ -8,3 +8,4 @@ cd /home/ben/Animal-Record-Keeping/
 
 echo "checking tasks due today"
 rake email_if_tasks_not_done RAILS_ENV=production
+echo "tasks due today checked"

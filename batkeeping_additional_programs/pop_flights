@@ -7,4 +7,5 @@ cd /home/ben/Animal-Record-Keeping/
 . /home/ben/.rvm/environments/ruby-1.8.7-head
 
 echo "populating automatic flight logs"
-#rake populate_daily_flight_logs RAILS_ENV=production
+rake populate_daily_flight_logs RAILS_ENV=production
+echo "automatic flight logs populated"
