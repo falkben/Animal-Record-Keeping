@@ -1,2 +1,9 @@
+#!/bin/bash
+
 cd /home/ben/Animal-Record-Keeping/
+
+. /home/ben/.rvm/environments/ruby-1.8.7-head
+
+echo "starting batkeeping"
 passenger start -e production -d
+echo "batkeeping started"

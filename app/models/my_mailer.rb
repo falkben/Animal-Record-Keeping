@@ -1,13 +1,14 @@
 class MyMailer < ActionMailer::Base
+
   def mail(recipient, msg_subject, msg_body)
-    from "batkeeper.pbs.jhu.edu"
+    from "no-reply@batkeeper.pbs.jhu.edu"
     recipients recipient
     subject msg_subject
     body :email_body => msg_body
   end
 
   def mass_mail(recipients, msg_subject, msg_body)
-    from "batkeeper.pbs.jhu.edu"
+    from "no-reply@batkeeper.pbs.jhu.edu"
     recipients recipients
     subject msg_subject
     body :email_body => msg_body

@@ -5,6 +5,6 @@ cd /home/ben/Animal-Record-Keeping/
 #source /home/ben/.rvm/scripts/rvm
 . /home/ben/.rvm/environments/ruby-1.8.7-head
 
-echo "poplulating task-census entries"
+echo "populating task-census entries"
 rake populate_census_entries RAILS_ENV=production
 echo "task-census entries populated"
