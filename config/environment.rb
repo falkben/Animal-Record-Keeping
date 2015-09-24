@@ -59,6 +59,7 @@ ActionMailer::Base.delivery_method = :smtp
 ActionMailer::Base.smtp_settings = {
   :address => "localhost",
   :port => 25,
+  :domain => "batkeeper.pbs.jhu.edu"
 }
 
 #From http://dev.rubyonrails.org/ticket/7047, this claims to resolve

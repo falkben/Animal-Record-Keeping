@@ -23,7 +23,7 @@ end
 ###########################################
 
 task :test_email => :environment do
-  MyMailer.deliver_mail("bfalk@umd.edu", "test_email", "let ben know if you get this")
+  MyMailer.deliver_mail("falk.ben@gmail.com", "test_email", "let ben know if you get this")
 end
 
 task :nil_out_cohs => :environment do
