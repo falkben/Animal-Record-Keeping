@@ -342,13 +342,13 @@ class MyMailer < ActionMailer::Base
     end
 
     #copy to make sure it's working
-    if !user_total.empty?
-      greeting = "Ben" + ",\n"
-      greeting = greeting + Time.now.strftime('%A, %B %d, %Y') + "\n\n"
-      self.deliver_mail('falk.ben@gmail.com',
-        "batkeeping copy of email sent to: " + user_total.collect{|u| u.name}.to_sentence,
-        greeting + msg_body_total + salutation)
-    end
+    #if !user_total.empty?
+    #  greeting = "Ben" + ",\n"
+    #  greeting = greeting + Time.now.strftime('%A, %B %d, %Y') + "\n\n"
+    #  self.deliver_mail('falk.ben@gmail.com',
+    #    "batkeeping copy of email sent to: " + user_total.collect{|u| u.name}.to_sentence,
+    #    greeting + msg_body_total + salutation)
+    #end
 
     for user_admin in User.administrator #reminder emails for admins
       bats_not_weighed_reminders, bats_not_flown_reminders = self.bats_which_need_reminders(user_admin, today)
